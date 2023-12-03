@@ -2,7 +2,6 @@ name: Main
 
 on: push
 
-
 jobs:
   build:
     name: Build
@@ -37,6 +36,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
